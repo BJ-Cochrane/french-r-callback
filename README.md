@@ -35,6 +35,16 @@ The installer:
 
 The installation is safe, reversible, and only affects your own R session.
 
+---
+
+## 🗑️ Uninstalling the Callback
+
+If you decide you no longer want the French callback, simply run:
+
+```r
+source("uninstall_french_callback.R")
+```
+
 ## ⚙️ Configuration
 
 Defaults can be modified:
