@@ -30,8 +30,7 @@ The installer:
    - `french_callback.R`
    - `french_words.csv`
 3. Makes a timestamped backup of your `.Rprofile` in a local `backups/` folder
-4. Safely updates your `~/.Rprofile` to automatically load the callback
-5. Prints instructions and default configuration options
+4. Safely updates your `~/.Rprofile` to automatically load the callback function
 
 The installation is safe, reversible, and only affects your own R session.
 
