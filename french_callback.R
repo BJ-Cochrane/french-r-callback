@@ -1,7 +1,4 @@
 # Load quietly
-if (!requireNamespace("crayon", quietly = TRUE)) {
-  install.packages("crayon", quiet = TRUE)
-}
 suppressPackageStartupMessages(library(crayon))
 
 # Define everything in a local environment to avoid polluting global env
