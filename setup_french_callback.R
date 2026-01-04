@@ -97,13 +97,22 @@ install_french_callback <- function() {
   
   block_lines <- c(
     marker_start,
-    "cb_path <- file.path(Sys.getenv('LOCALAPPDATA'), 'R', 'scripts', 'french_callback.R')",
-    "if (file.exists(cb_path)) {",
-    "  ok <- try(source(cb_path), silent = TRUE)",
-    "  if (inherits(ok, 'try-error')) message('Error running french_callback.R')",
+    "if (file.exists(file.path(Sys.getenv('LOCALAPPDATA'), 'R', 'scripts', 'french_callback.R'))) {",
+    "  if (inherits(",
+    "    try(",
+    "      source(",
+    "        file.path(Sys.getenv('LOCALAPPDATA'), 'R', 'scripts', 'french_callback.R'),",
+    "      ),",
+    "      silent = TRUE",
+    "    ),",
+    "    'try-error'",
+    "  )) {",
+    "    message('Error running french_callback.R')",
+    "  }",
     "}",
     marker_end
   )
+  
   
   # ------------------------------------------------------------
   # Step 5: Insert or replace block between markers
