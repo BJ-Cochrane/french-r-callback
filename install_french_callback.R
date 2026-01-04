@@ -79,7 +79,7 @@ install_french_callback <- function() {
     contents <- readLines(rprof, warn = FALSE)
     
     timestamp   <- format(Sys.time(), "%Y%m%d-%H%M%S")
-    backup_path <- file.path(backup_dir, paste0(".Rprofile.bak-", timestamp))
+    backup_path <- file.path(backup_dir, paste0(".Rprofile.backup-", timestamp))
     
     file.copy(rprof, backup_path, overwrite = FALSE)
     cat(ok_col("  .Rprofile backup created: "), path_col(backup_path), "\n", sep = "")
